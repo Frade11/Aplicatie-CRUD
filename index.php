@@ -6,11 +6,13 @@ include("conection.php");
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Students</title>
 </head>
 <body>
     <div class="table-container">
     <h2>Students table</h2>
+    <button>Adauga elev</button>
     <table border="1">
         <tr>
             <th>Numele</th>
