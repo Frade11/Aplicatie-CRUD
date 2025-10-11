@@ -22,7 +22,6 @@ body {
     margin-top: 0;
     margin-bottom: 20px;
     font-size: 26px;
-    color: #333;
     color: white;
 }
 .table-container button {
@@ -57,7 +56,6 @@ th {
 }
 td {
     padding: 18px;
-
     color: #ffffff;
 }
 
@@ -67,6 +65,12 @@ tr:nth-child(even) {
 
 tr:hover {
     background-color: rgb(65, 74, 85);
+}
+.edit, .clear {
+    width: 18px;
+}
+.clear{
+    margin-left: 20px;
 }
 @media (max-width: 700px) {
     .table-container {

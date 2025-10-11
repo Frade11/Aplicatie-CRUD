@@ -37,6 +37,7 @@ if(mysqli_num_rows($result) > 0){
         echo '<td>' . $row['DataNasterii'] . '</td>';
         echo '<td>' . $row['SEX'] . '</td>';
         echo '<td>' . $row['NotaMedieBac'] . '</td>';
+        echo '<td> <img src = "images/edit.png" class = "edit"> <img src = "images/clear.png" class = "clear"> </td>';
         echo '</tr>';
     }
 }
