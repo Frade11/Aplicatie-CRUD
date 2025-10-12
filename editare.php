@@ -46,7 +46,7 @@ $student_id = isset($_GET['id']) ? $_GET['id'] : null;
             <img src="images/left-arrow.png" alt="">
             <span>Lista elevi</span>
         </div>
-        <form action="edit.php" method="POST">
+        <form action="save_student.php" method="POST">
             <span class="Edit">Editare elev</span>
             <input type="hidden" id="studentId" name="id">
             <span>Nume</span> <input type="text" name = "numele" id="editName" required>
