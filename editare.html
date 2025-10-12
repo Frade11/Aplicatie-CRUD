@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editare elev</title>
+</head>
+<body>
+    <div class="container">
+        <div class="open-table">
+            <img src="" alt="">
+            <span>Lista elevi</span>
+        </div>
+        <form action="edit.php" method="GET">
+            <span class="Edit">Editare elev</span>
+            <span>Nume</span> <input type="text" id="editName" required>
+            <span>Prenume</span> <input type="text" id="editLName" required>
+            <span>Adresa</span> <input type="text" id="editAdress" required>
+            <span>Email</span> <input type="text" id="editEmail" required>
+            <span>Data nasterii</span> <input type="date" id="editDate" required>
+            <span>Sex</span> <input type="text" id="editSex" pattern="[fm]" required>
+            <span>Media BAC</span> <input type="number" id="editAvg" required>
+            <input type="submit" value="Edit">
+        </form>
+    </div>
+</body>
+</html>
