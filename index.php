@@ -12,7 +12,7 @@ include("conection.php");
 <body>
     <div class="table-container">
     <h2>Students table</h2>
-    <button>Adauga elev</button>
+    <button onclick="location.href = 'editare.html'">Adauga elev</button>
     <table border="1">
         <tr>
             <th>Numele</th>
