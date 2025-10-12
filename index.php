@@ -12,7 +12,7 @@ include("conection.php");
 <body>
     <div class="table-container">
     <h2>Students table</h2>
-    <button onclick="location.href = 'editare.html'">Adauga elev</button>
+    <button onclick="location.href = 'redirect_to_add'">Adauga elev</button>
     <table border="1">
         <tr>
             <th>Numele</th>
@@ -37,7 +37,14 @@ if(mysqli_num_rows($result) > 0){
         echo '<td>' . $row['DataNasterii'] . '</td>';
         echo '<td>' . $row['SEX'] . '</td>';
         echo '<td>' . $row['NotaMedieBac'] . '</td>';
-        echo '<td> <img src = "images/edit.png" class = "edit"> <img src = "images/clear.png" class = "clear"> </td>';
+        echo '<td>';
+        echo '<a href = "redirect_to_edit.php">';
+        echo  '<img src = "images/edit.png" class = "edit">' ;
+        echo '</a>';
+        echo '<a href = "redirect_to_clear.php">';
+        echo  '<img src = "images/clear.png" class = "clear">';
+        echo '</a>';
+        echo '</td>';
         echo '</tr>';
     }
 }

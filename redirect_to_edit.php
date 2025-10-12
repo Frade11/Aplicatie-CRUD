@@ -1,0 +1,16 @@
+<?php
+session_start();
+
+if(isset($_GET['id'])){
+    $student_id = $_GET['id'];
+
+    $_SESSION['curent_user_id'] = $student_id;
+    header("Location: editare.html");
+    exit;
+}else{
+    $_SESSION['curent_user_id'] = null;
+    header("Location: adauga_elev.html");
+    exit;
+}
+
+?>
