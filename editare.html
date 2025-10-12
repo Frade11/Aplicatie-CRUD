@@ -12,15 +12,15 @@
             <img src="images/left-arrow.png" alt="">
             <span>Lista elevi</span>
         </div>
-        <form action="edit.php" method="GET">
+        <form action="edit.php" method="POST">
             <span class="Edit">Editare elev</span>
-            <span>Nume</span> <input type="text" id="editName" required>
-            <span>Prenume</span> <input type="text" id="editLName" required>
-            <span>Adresa</span> <input type="text" id="editAdress" required>
-            <span>Email</span> <input type="text" id="editEmail" required>
-            <span>Data nasterii</span> <input type="date" id="editDate" required>
-            <span>Sex</span> <input type="text" id="editSex" pattern="[fm]" required>
-            <span>Media BAC</span> <input type="number" id="editAvg" required>
+            <span>Nume</span> <input type="text" name = "numele" id="editName" required>
+            <span>Prenume</span> <input type="text " name="prenumele" id="editLName" required>
+            <span>Adresa</span> <input type="text" name="adresa" id="editAdress" required>
+            <span>Email</span> <input type="text" name="email" id="editEmail" required>
+            <span>Data nasterii</span> <input type="date" name="dataNasterii" id="editDate" required>
+            <span>Sex</span> <input type="text" name="sex" id="editSex" pattern="[fm]" required>
+            <span>Media BAC</span> <input type="number" name="BACAvg" id="editAvg" required>
             <input type="submit" value="Edit">
         </form>
     </div>
