@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', function(){
     fetch('redirect_to_edit.php').then(Response => Response.json())
     .then(student =>{
         if(student && student.IDELEV){
+            document.getElementById('studentID').value = student.IDELEV;
             document.getElementById('editName').value = student.NUMELE || '';
             document.getElementById('editLName').value = student.PRENUMELE || '';
             document.getElementById('editAdress').value = student.Adresa || '';

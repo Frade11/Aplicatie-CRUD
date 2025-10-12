@@ -9,7 +9,7 @@ if(isset($_GET['id'])){
     exit;
 }else{
     $_SESSION['curent_user_id'] = null;
-    header("Location: adauga_elev.html");
+    header("Location: editare.html");
     exit;
 }
 
