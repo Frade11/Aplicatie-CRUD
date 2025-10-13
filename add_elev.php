@@ -13,7 +13,7 @@
             <span>Lista elevi</span>
         </div>
         <form action="save_student.php" method="POST">
-            <span class="Edit">Editare elev</span>
+            <span class="Edit">Adaugare elev</span>
             <input type="hidden" id="studentId" name="id">
             <span>Nume</span> <input type="text" name = "numele" id="editName" required>
             <span>Prenume</span> <input type="text" name="prenumele" id="editLName" required>
