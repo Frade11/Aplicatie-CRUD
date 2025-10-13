@@ -25,7 +25,6 @@ if($id) {
     mysqli_stmt_bind_param($stmt, "ssssssdi", 
         $numele, $prenumele, $adresa, $email, $datanasterii, $sex, $notamediebac, $id);
 } else {
-    // НЕТ ID - добавляем нового ученика
     $sql = "INSERT INTO elevi (NUMELE, PRENUMELE, Adresa, Email, DataNasterii, SEX, NotaMedieBac) 
             VALUES (?, ?, ?, ?, ?, ?, ?)";
     
@@ -34,9 +33,7 @@ if($id) {
         $numele, $prenumele, $adresa, $email, $datanasterii, $sex, $notamediebac);
 }
 
-// Выполняем запрос
 if(mysqli_stmt_execute($stmt)) {
-    // Успешно - возвращаем на главную
     header("Location: index.php");
 } else {
     echo "Eroare la salvare: " . mysqli_error($conection);

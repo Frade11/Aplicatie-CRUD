@@ -1,43 +1,13 @@
-<?php
-include("conection.php");
-
-if($_SERVER['REQUEST_METHOD']=='POST'){
-    $id = $_POST['id'];
-    $numele = $_POST['numele'];
-    $prenumele = $_POST['prenumele'];
-    $adresa = $_POST['adresa'];
-    $email = $_POST['email'];
-    $datanasterii = $_POST['datanasterii'];
-    $sex = $_POST['sex'];
-    $notamediebac = $_POST['notamediebac'];
-
-    if($id) {
-    $sql = "UPDATE elevi SET NUMELE=?, PRENUMELE=?, Adresa=?, Email=?, DataNasterii=?, SEX=?, NotaMedieBac=? WHERE IDELEV=?";
-    $stmt = mysqli_prepare($conection, $sql);
-    mysqli_stmt_bind_param($stmt, "ssssssdi", $numele, $prenumele, $adresa, $email, $datanasterii, $sex, $notamediebac, $id);
-} else {
-    $sql = "INSERT INTO elevi (NUMELE, PRENUMELE, Adresa, Email, DataNasterii, SEX, NotaMedieBac) VALUES (?, ?, ?, ?, ?, ?, ?)";
-    $stmt = mysqli_prepare($conection, $sql);
-    mysqli_stmt_bind_param($stmt, "ssssssd", $numele, $prenumele, $adresa, $email, $datanasterii, $sex, $notamediebac);
-}
-    mysqli_stmt_execute($stmt);
-    header("Location: index.php");
-    exit;
-}
-
-$student_id = isset($_GET['id']) ? $_GET['id'] : null;
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="editStyle.css">
-    <script src="student_edit_load.js" defer></script>
-    <title>Editare elev</title>
+    <title>Adauga elev</title>
 </head>
 <body>
-    <div class="container">
+     <div class="container">
         <div class="open-table" onclick="location.href='index.php'">
             <img src="images/left-arrow.png" alt="">
             <span>Lista elevi</span>
@@ -62,4 +32,3 @@ $student_id = isset($_GET['id']) ? $_GET['id'] : null;
     </div>
 </body>
 </html>
-<?php mysqli_close($conection);
