@@ -10,7 +10,35 @@ include("conection.php");
     <title>Students</title>
 </head>
 <body>
-    
+    <style>
+    .message {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 15px 30px;
+    border-radius: 8px;
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+    color: #155724;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+    z-index: 100;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.message.error {
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    color: #721c24;
+}
+    </style>
 <?php
 if(isset($_GET['success'])):?>
 <div class="message" id="succesMsg">Operatia a fost efectuata cu succes!</div>
