@@ -34,9 +34,11 @@ if($id) {
 }
 
 if(mysqli_stmt_execute($stmt)) {
-    header("Location: index.php");
+    header("Location: index.php?success=1");
+    exit;
 } else {
-    echo "Eroare la salvare: " . mysqli_error($conection);
+    header("Location: index.php?error=1");
+    exit;
 }
 
 mysqli_stmt_close($stmt);

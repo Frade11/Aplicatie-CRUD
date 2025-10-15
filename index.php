@@ -10,6 +10,33 @@ include("conection.php");
     <title>Students</title>
 </head>
 <body>
+    
+<?php
+if(isset($_GET['success'])):?>
+<div class="message" id="succesMsg">Operatia a fost efectuata cu succes!</div>
+<script>
+    setTimeout(() => {
+        const msg = document.getElementById('succesMsg');
+        if(msg){
+            msg.style.opacity = 0;
+            setTimeout(() => msg.remove(), 500);
+        }
+    }, 3000);
+</script>
+<?php elseif(isset($_GET['error'])): ?>
+    <div class="message error" id="errorMsg">A aparut o eroare in operatie</div>
+    <script>
+        setTimeout(() =>{
+            const msg = document.getElementById('errorMsg');
+            if(msg){
+                msg.style.opacity = 0;
+                setTimeout(() => {
+                   msg.remove(); 
+                }, 500);
+            };
+        }, 3000);
+    </script>
+<?php endif; ?>
     <div class="table-container">
     <h2>Students table</h2>
     <button onclick="location.href = 'add_elev.php'">Adauga elev</button>
