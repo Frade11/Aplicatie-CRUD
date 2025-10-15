@@ -47,6 +47,12 @@ if(isset($_GET['success'])):?>
         const msg = document.getElementById('succesMsg');
         if(msg){
             msg.style.opacity = 0;
+            
+            if(history.replaceState){
+                const url = new URL(window.location);
+                url.searchParams.delete('success');
+                window.history.replaceState({}, document.title, url.toString());
+            }
             setTimeout(() => msg.remove(), 500);
         }
     }, 3000);
@@ -58,6 +64,12 @@ if(isset($_GET['success'])):?>
             const msg = document.getElementById('errorMsg');
             if(msg){
                 msg.style.opacity = 0;
+
+                if(history.replaceState){
+                    const url = new URL(window.location);
+                    url.searchParams.delete('error');
+                    window.history.replaceState({}, document.title, url.toString());
+                }
                 setTimeout(() => {
                    msg.remove(); 
                 }, 500);
