@@ -15,11 +15,11 @@ if(isset($_GET['id'])){
     $_SESSION['message'] = "User didnt found";
     }
     mysqli_stmt_close($stmt);
-    header("Location: index.php");
+    header("Location: index.php?success=1");
     exit;
 }else {
     $_SESSION['message'] = "Id is not specified";
-    header("Location: index.php");
+    header("Location: index.php?error=1");
     exit;
 }
 
